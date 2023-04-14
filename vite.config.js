@@ -1,7 +1,9 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-
-// https://vitejs.dev/config/
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vitest/config';
 export default defineConfig({
-  plugins: [svelte()],
-})
+    plugins: [sveltekit()],
+    test: {
+        include: ['src/**/*.{test,spec}.{js,ts}']
+    }
+});
+//# sourceMappingURL=vite.config.js.map
